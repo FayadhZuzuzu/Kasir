@@ -15,6 +15,45 @@ void tambahBarang(Barang barang[], int &jumlah);
 void tampilBarang(Barang barang[], int jumlah);
 void cetakStruk(Barang barang[], int jumlah);
 
+int main() {
+    Barang barang[100];
+    int jumlah = 0;
+    int pilihan;
+
+    do {
+        system("cls"); 
+        header();
+        menuUtama();
+        cout << "Pilih menu: ";
+        cin >> pilihan;
+
+        switch (pilihan) {
+            case 1:
+                tambahBarang(barang, jumlah);
+                break;
+            case 2:
+                tampilBarang(barang, jumlah);
+                break;
+            case 3:
+                cetakStruk(barang, jumlah);
+                break;
+            case 4:
+                cout << "\nTerima kasih telah menggunakan program kasir ini!\n";
+                break;
+            default:
+                cout << "\nPilihan tidak valid!\n";
+        }
+
+        if (pilihan != 4) {
+            cout << "\nTekan Enter untuk kembali ke menu...";
+            cin.ignore();
+            cin.get();
+        }
+    } while (pilihan != 4);
+
+    return 0;
+}
+
 void tambahBarang(Barang barang[], int &jumlah) {
     int n;
     cout << "\nBerapa banyak barang yang ingin ditambahkan? ";
