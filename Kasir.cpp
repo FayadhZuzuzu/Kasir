@@ -98,7 +98,3 @@ void tampilBarang(Barang barang[], int jumlah) {
     }
     cout << "---------------------------------------------\n";
 }
-
-int main(){
-	
-}
