@@ -2,6 +2,12 @@
 #include<windows.h>
 using namespace std;
 
+struct Barang {
+    string nama;
+    double harga;
+};
+
+
 
 void header();
 void menuUtama();
