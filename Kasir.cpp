@@ -53,7 +53,18 @@ int main() {
 
     return 0;
 }
+void header(){
+    cout << "=============================================\n";
+    cout << "  >>>>>     PROGRAM KASIR MINI       <<<<<   \n";
+    cout << "=============================================\n\n";
+}
 
+void menuUtama() {
+    cout << "1. Tambah Barang\n";
+    cout << "2. Lihat Daftar Barang\n";
+    cout << "3. Cetak Struk Pembelian\n";
+    cout << "4. Keluar\n\n";
+}
 void tambahBarang(Barang barang[], int &jumlah) {
     int n;
     cout << "\nBerapa banyak barang yang ingin ditambahkan? ";
